@@ -45,6 +45,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.compass-registration-of-visitoirs-java</groupId>
+			<artifactId>demo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.5.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+			<version>3.3.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
