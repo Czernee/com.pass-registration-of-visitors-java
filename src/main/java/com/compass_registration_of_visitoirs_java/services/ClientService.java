@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.compass_registration_of_visitoirs_java.models.Client;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -34,7 +35,7 @@ public class ClientService  {
         return clientRepository.save(clientData);
     }
 
-    /*public List<Client> getStayingClients() {
-        return clientRepository.findAll();
-    }*/
+    public List<Client> getStayingClients(Date currentDate) {
+        return clientRepository.findAllStayingClients(currentDate);
+    }
 }
