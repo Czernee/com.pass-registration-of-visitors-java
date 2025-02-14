@@ -1,0 +1,30 @@
+services:
+  postgresdb:
+    image: postgres:15.2
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: reg_of_vis
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    image: spring-app:latest
+    container_name: spring_app_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://postgresdb:5432/reg_of_vis
+        SPRING_DATASOURCE_USERNAME: postgres
+        SPRING_DATASOURCE_PASSWORD: root
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresdb
+
+volumes:
+  postgres_data:

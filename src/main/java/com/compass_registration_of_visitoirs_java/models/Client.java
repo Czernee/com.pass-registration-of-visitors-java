@@ -1,74 +1,32 @@
 package com.compass_registration_of_visitoirs_java.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
+@Table(name="clients")
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@ToString
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    public long getId() {
-        return id;
-    }
+    private String full_name;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    private String passport;
 
-    public String getFullname() {
-        return fullname;
-    }
+    private String phone;
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
+    private String room;
 
-    public String getPassport() {
-        return passport;
-    }
+    private LocalDateTime arrival;
 
-    public void setPassport(String passport) {
-        this.passport = passport;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getRoom() {
-        return room;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
-    }
-
-    public Date getArrival() {
-        return arrival;
-    }
-
-    public void setArrival(Date arrival) {
-        this.arrival = arrival;
-    }
-
-    public Date getDeparture() {
-        return departure;
-    }
-
-    public void setDeparture(Date departure) {
-        this.departure = departure;
-    }
-
-    private String fullname, passport, phone, room;
-    private Date arrival, departure;
+    private LocalDateTime departure;
 }
