@@ -11,6 +11,5 @@ import java.util.List;
 
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Long> {
-    @Query("SELECT c FROM Client c WHERE c.arrival <= :currentDate AND c.departure >= :currentDate")
-    List<Client> findAllStayingClients(@Param("currentDate") Date currentDate);
+
 }

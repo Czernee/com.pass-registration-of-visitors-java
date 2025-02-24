@@ -6,11 +6,11 @@ import com.compass_registration_of_visitoirs_java.dto.ClientResponse;
 import java.util.List;
 
 public interface ClientService{
-    ClientResponse getClients(int pageNo, int pageSize);
-    ClientDto getClientById(long clientId);
     ClientDto createClient(ClientDto clientDto);
-    ClientDto updateClient(ClientDto clientDto);
-    void deleteClient(int clientId);
-    List<ClientDto> getStayingClients();
-    boolean ifClientStaying(int clientId);
+    ClientResponse getAllClients(int pageNo, int pageSize);
+    ClientDto getClientById(long clientId);
+    ClientDto updateClient(long clientId, ClientDto clientDto);
+    void deleteClient(long clientId);
+    ClientResponse getStayingClients(int pageNo, int pageSize);
+    boolean ifClientStaying(long clientId);
 }
