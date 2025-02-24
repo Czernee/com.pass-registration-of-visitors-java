@@ -1,4 +1,4 @@
-package com.compass_registration_of_visitoirs_java.repo;
+package com.compass_registration_of_visitoirs_java.repository;
 
 import com.compass_registration_of_visitoirs_java.models.Client;
 import org.springframework.data.jpa.repository.JpaRepository;

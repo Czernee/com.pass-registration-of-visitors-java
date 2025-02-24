@@ -1,16 +1,12 @@
 package com.compass_registration_of_visitoirs_java.controllers;
 
 import com.compass_registration_of_visitoirs_java.models.Client;
-import com.compass_registration_of_visitoirs_java.repo.ClientRepository;
+import com.compass_registration_of_visitoirs_java.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.HTML;
-import java.awt.image.RescaleOp;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;

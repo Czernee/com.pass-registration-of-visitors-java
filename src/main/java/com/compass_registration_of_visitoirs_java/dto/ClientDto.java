@@ -1,29 +1,22 @@
-package com.compass_registration_of_visitoirs_java.models;
+package com.compass_registration_of_visitoirs_java.dto;
 
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Data
-@Entity
-@Table(name="clients")
-@NoArgsConstructor
+@Builder
 @AllArgsConstructor
-public class Client {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+@NoArgsConstructor
+public class ClientDto {
     private long id;
-
     private String fullName;
-
     private String passport;
-
     private String phone;
-
     private String room;
-
     private LocalDateTime arrival;
-
     private LocalDateTime departure;
 }
