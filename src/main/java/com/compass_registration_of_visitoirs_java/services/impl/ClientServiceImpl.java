@@ -71,7 +71,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientDto getClientById(long clientId) {
+    public ClientDto clientDetail(long clientId) {
         Client client = clientRepository.findById(clientId).orElseThrow(() -> new ClientNotFoundException("Client with this id can't be found"));
         return mapToDto(client);
     }
