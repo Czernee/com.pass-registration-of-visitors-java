@@ -159,23 +159,3 @@
 Примеры:
 * Доступ к API осуществляется добавлением заголовка `Authorization` в запросы.
 * Тип авторизации: `Bearer Token`.
-
-## Разработка
-
-### Структура проекта
-visitor-registration-microservice/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── com/example/
-│ │ │ ├── controller/ # Контроллеры API
-│ │ │ ├── service/ # Бизнес-логика
-│ │ │ ├── repository/ # Интерфейсы репозиториев
-│ │ │ ├── model/ # Сущности и DTO
-│ │ │ └── config/ # Конфигурационные файлы
-│ │ └── resources/
-│ │ ├── application.properties # Настройки приложения
-│ │ └── ...
-│ └── test/ # Тесты
-├── pom.xml # Файл Maven
-└── README.md # Этот файл
