@@ -17,14 +17,14 @@
 *   **Язык программирования:** Java
 *   **Фреймворк:** Spring Boot
 *   **Безопасность:** Spring Security, JWT
-*   **База данных:** [Укажите вашу базу данных, например, PostgreSQL, MySQL и т.д.]
-*   **Управление зависимостями:** Maven/Gradle
+*   **База данных:** PostgreSQL
+*   **Управление зависимостями:** Maven
 *   **Тестирование:** JUnit, Mockito
 
 ## Требования к окружению
 
 *   Java Development Kit (JDK) 11 или выше
-*   Maven или Gradle
+*   Maven 
 *   Установленная и настроенная база данных
 *   Postman или аналогичный инструмент для тестирования API
 
@@ -33,14 +33,13 @@
 1.  **Клонирование репозитория:**
 
     ```
-    git clone [URL вашего репозитория]
-    cd [имя репозитория]
+    git clone (https://github.com/Czernee/com.pass-registration-of-visitors-java
     ```
 
 2.  **Настройка базы данных:**
 
     *   Создайте базу данных для микросервиса.
-    *   Настройте параметры подключения к базе данных в файле `application.properties` или `application.yml`.
+    *   Настройте параметры подключения к базе данных в файле `application.properties`:
         ```
         spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
         spring.datasource.username=your_username
@@ -53,10 +52,6 @@
     *   С использованием Maven:
         ```
         mvn clean install
-        ```
-    *   С использованием Gradle:
-        ```
-        gradle clean build
         ```
 
 4.  **Запуск приложения:**
