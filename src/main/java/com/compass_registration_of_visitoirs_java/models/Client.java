@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Table(name="clients")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -35,7 +35,7 @@ public class ClientController {
 
     @GetMapping("clients/{id}")
     public ResponseEntity<ClientDto> clientDetail(@PathVariable int id) {
-        return new ResponseEntity<>(clientService.clientDetail(id), HttpStatus.OK);
+        return new ResponseEntity<>(clientService.getClientById(id), HttpStatus.OK);
     }
 
     @PutMapping("clients/{id}/update")
@@ -46,7 +46,7 @@ public class ClientController {
 
     @DeleteMapping("clients/{id}/delete")
     public ResponseEntity<String> deleteClient(@PathVariable("id") int clientId) {
-        clientService.deleteClient(clientId);
+        clientService.deleteClientById(clientId);
         return new ResponseEntity<>("Client deleted", HttpStatus.OK);
     }
 

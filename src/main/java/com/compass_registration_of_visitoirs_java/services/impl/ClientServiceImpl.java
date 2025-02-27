@@ -71,7 +71,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientDto clientDetail(long clientId) {
+    public ClientDto getClientById(long clientId) {
         Client client = clientRepository.findById(clientId).orElseThrow(() -> new ClientNotFoundException("Client with this id can't be found"));
         return mapToDto(client);
     }
@@ -93,7 +93,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void deleteClient(long clientId) {
+    public void deleteClientById(long clientId) {
         Client client = clientRepository.findById(clientId).orElseThrow(() -> new ClientNotFoundException("Client with this id can't be found"));
         clientRepository.delete(client);
     }
