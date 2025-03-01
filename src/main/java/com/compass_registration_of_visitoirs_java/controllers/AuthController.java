@@ -22,13 +22,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.print.attribute.standard.Media;
-import javax.swing.text.html.HTML;
 import java.util.Collections;
 
 @RestController
 @RequestMapping("/api/auth/")
-public class AuthContollers {
+public class AuthController {
 
     private AuthenticationManager authenticationManager;
     private UserRepository userRepository;
@@ -37,7 +35,7 @@ public class AuthContollers {
     private JWTGenerator jwtGenerator;
 
     @Autowired
-    public AuthContollers(AuthenticationManager authenticationManager, UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder, JWTGenerator jwtGenerator) {
+    public AuthController(AuthenticationManager authenticationManager, UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder, JWTGenerator jwtGenerator) {
         this.authenticationManager = authenticationManager;
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;

@@ -24,12 +24,10 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private JwtAuthEntryPoint authEntryPoint;
-    private CustomUserDetailsService customUserDetailsService;
+    private final JwtAuthEntryPoint authEntryPoint;
 
     @Autowired
     public SecurityConfig(JwtAuthEntryPoint authEntryPoint, CustomUserDetailsService customUserDetailsService) {
-        this.customUserDetailsService = customUserDetailsService;
         this.authEntryPoint = authEntryPoint;
     }
 
